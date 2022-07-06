@@ -1,5 +1,7 @@
 import {RequestBodyPropertiesType} from "./requestBodyPropertiesType";
 import {ResponseMessagesType} from "./responseMessages.type";
+import {LogType} from "./log.type";
+import {LogMessagesType} from "./logMessages.type";
 
 export interface VariablesType{
     // Database logging
@@ -18,4 +20,8 @@ export interface VariablesType{
     // Request/Response
     requestProperties: RequestBodyPropertiesType
     responseMessages: ResponseMessagesType
+
+    // Logs
+    logMessagesType: LogType
+    logMessages: LogMessagesType
 }
