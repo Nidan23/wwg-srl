@@ -49,5 +49,9 @@
     "error": {
       "database": "Server was unable to create connection with DB"
     }
+  },
+  "corsSkip": {
+    "header": "Access-Control-Allow-Origin",
+    "value": "*"
   }
 }

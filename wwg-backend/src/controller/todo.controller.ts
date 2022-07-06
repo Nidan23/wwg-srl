@@ -33,29 +33,29 @@ export class TodoController{
 
         if (!this.validationService.todoRequestValidation().hasAllPropertiesToAdd(todoList)) {
             this.loggingService.warning(this.variableService.variables.logMessages.warning.notValid)
-            return response.status(400).json(this.responseGeneratorService.generateResponse(this.variableService.variables.responseMessages.badRequest, true))
+            return response.setHeader(this.variableService.variables.corsSkip.header, this.variableService.variables.corsSkip.value).status(400).json(this.responseGeneratorService.generateResponse(this.variableService.variables.responseMessages.badRequest, true))
         }
 
         this.loggingService.message(this.variableService.variables.logMessages.info.add)
-        return response.status(200).json(await this.todoService.add(todoList))
+        return response.setHeader(this.variableService.variables.corsSkip.header, this.variableService.variables.corsSkip.value).status(200).json(await this.todoService.add(todoList))
     }
 
     private async getTodo(request: express.Request, response: express.Response){
         this.loggingService.message(this.variableService.variables.logMessages.info.get)
-        return response.status(200).json(await this.todoService.getOne(request.params.id))
+        return response.setHeader(this.variableService.variables.corsSkip.header, this.variableService.variables.corsSkip.value).status(200).json(await this.todoService.getOne(request.params.id))
     }
 
     private async getAllTodo(request: express.Request, response: express.Response){
         this.loggingService.message(this.variableService.variables.logMessages.info.get)
-        return response.status(200).json(await this.todoService.getAll())
+        return response.setHeader(this.variableService.variables.corsSkip.header, this.variableService.variables.corsSkip.value).status(200).json(await this.todoService.getAll())
     }
 
     private async deleteTodo(request: express.Request, response: express.Response){
         if(!(request.params?.id != undefined))
-            return response.status(400).json(this.responseGeneratorService.generateResponse(this.variableService.variables.responseMessages.badRequest, true))
+            return response.setHeader(this.variableService.variables.corsSkip.header, this.variableService.variables.corsSkip.value).status(400).json(this.responseGeneratorService.generateResponse(this.variableService.variables.responseMessages.badRequest, true))
 
         this.loggingService.message(this.variableService.variables.logMessages.info.remove)
-        return response.status(200).json(await this.todoService.remove(request.params.id))
+        return response.setHeader(this.variableService.variables.corsSkip.header, this.variableService.variables.corsSkip.value).status(200).json(await this.todoService.remove(request.params.id))
     }
 
     private async updateTodo(request: express.Request, response: express.Response) {
@@ -63,10 +63,10 @@ export class TodoController{
 
         if (!this.validationService.todoRequestValidation().hasAllProperties(todoList)) {
             this.loggingService.warning(this.variableService.variables.logMessages.warning.notValid)
-            return response.status(400).json(this.responseGeneratorService.generateResponse(this.variableService.variables.responseMessages.badRequest, true))
+            return response.setHeader(this.variableService.variables.corsSkip.header, this.variableService.variables.corsSkip.value).status(400).json(this.responseGeneratorService.generateResponse(this.variableService.variables.responseMessages.badRequest, true))
         }
 
         this.loggingService.message(this.variableService.variables.logMessages.info.update)
-        return response.status(200).json(await this.todoService.update(todoList))
+        return response.setHeader(this.variableService.variables.corsSkip.header, this.variableService.variables.corsSkip.value).status(200).json(await this.todoService.update(todoList))
     }
 }
