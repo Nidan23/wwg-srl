@@ -1,0 +1,12 @@
+version: '3'
+services:
+  wwg-frontend:
+    build: ./wwg-frontend
+    depends_on:
+      - wwg-backend
+    ports:
+      - "80:80"
+  wwg-backend:
+    build: ./wwg-backend
+    ports:
+      - '3000:3000'cls
