@@ -1,0 +1,16 @@
+/.idea/modules.xml
+/.idea/node-js-1-ctzizj.iml
+/.idea/vcs.xml
+
+# Default ignored files
+/shelf/
+workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/.idea/workspace.xml
+
+node_modules
+/todo
