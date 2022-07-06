@@ -2,6 +2,7 @@ import {RequestBodyPropertiesType} from "./requestBodyPropertiesType";
 import {ResponseMessagesType} from "./responseMessages.type";
 import {LogType} from "./log.type";
 import {LogMessagesType} from "./logMessages.type";
+import {CorsSkipType} from "./corsSkip.type";
 
 export interface VariablesType{
     // Database logging
@@ -24,4 +25,7 @@ export interface VariablesType{
     // Logs
     logMessagesType: LogType
     logMessages: LogMessagesType
+
+    // Cors Skip
+    corsSkip: CorsSkipType
 }
