@@ -1,0 +1,21 @@
+{
+  "add": [
+    {
+      "name": "Eating",
+      "createdAt": "now",
+      "isFinished": false
+    }
+  ],
+  "update": [
+    {
+      "id": "1",
+      "name": "Eating",
+      "createdAt": "in past",
+      "completedAt": "now",
+      "isFinished": true
+    }
+  ],
+  "delete": {
+    "id": "1"
+  }
+}
