@@ -1,0 +1,12 @@
+<div class="container-fluid w-50 text-center pt-3">
+  <div class="row">
+    <div class="col">
+      <input class="form-control" placeholder="Write your task" #todoText />
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-primary" (click)="addTodo(todoText.value)">
+        Add
+      </button>
+    </div>\
+  </div>
+</div>

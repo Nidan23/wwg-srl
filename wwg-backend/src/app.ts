@@ -1,5 +1,6 @@
 import * as express from 'express'
 import * as bodyParser from 'body-parser'
+import * as cors from 'cors'
 import {LoggingService} from "./service/logging.service";
 import {VariableService} from "./service/variable.service";
 
@@ -21,6 +22,9 @@ export default class App {
 
     private initMiddlewares(){
         this.app.use(bodyParser.json())
+        this.app.use(cors({
+            origin: this.variableService.variables.corsSkip.value
+        }))
     }
 
     private initControllers(controllers: any[]){

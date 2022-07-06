@@ -46,7 +46,7 @@ export class DatabaseService {
 
     updateTodo(todo: TodoType){
         // @ts-ignore
-        return this.getRepository().update(new TodoModel, {name: todo.name, createdAt: todo.createdAt, completedAt: todo.completedAt, isFinished: todo.isFinished })
+        return this.getRepository().update(todo.id, {name: todo.name, createdAt: todo.createdAt, completedAt: todo.completedAt, isFinished: todo.isFinished })
     }
 
     deleteTodo(todoId: number){
