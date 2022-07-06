@@ -1,0 +1,32 @@
+{
+  "databaseUp": "Up",
+  "databaseDown": "Down",
+  "mainPath": "/todo",
+  "addTodo": "add",
+  "getTodo": "get",
+  "getAllTodo": "getAll",
+  "deleteTodo": "delete",
+  "updateTodo": "update",
+  "defaultPort": "3000",
+  "requestProperties": {
+    "id": "id",
+    "name": "name",
+    "createdAt": "createdAt",
+    "completedAt": "completedAt",
+    "isFinished": "isFinished"
+  },
+  "responseMessages": {
+    "todoAddPositive": "Todos successfully added",
+    "todoAddNegative": "Todos not added error happened",
+    "todoDeletePositive": "Todo successfully deleted",
+    "todoDeleteNegative": "Todo delete went unsuccessfully error happened",
+    "todoUpdatePositive": "Todos successfully updated",
+    "todoUpdateNegative": "Todos update went unsuccessfully error happened",
+    "todoGetPositive": "Todo successfully got",
+    "todoGetNegative": "Todo get went unsuccessfully error happened",
+    "todoGetAllPositive": "Todos successfully got",
+    "todoGetAllNegative": "Todos get went unsuccessfully error happened",
+    "badRequest": "Bad Request",
+    "internalServerError": "Internal Server Error"
+  }
+}
