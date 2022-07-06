@@ -28,5 +28,26 @@
     "todoGetAllNegative": "Todos get went unsuccessfully error happened",
     "badRequest": "Bad Request",
     "internalServerError": "Internal Server Error"
+  },
+  "logMessagesType": {
+    "info": "INFO",
+    "warning": "WARNING",
+    "error": "ERROR"
+  },
+  "logMessages": {
+    "info": {
+      "add": "User added 2do",
+      "remove": "User removed 2do",
+      "update": "User updated 2do",
+      "get": "User fetched 2do",
+      "database": "Database is up",
+      "appRunning": "App is running on: "
+    },
+    "warning": {
+      "notValid": "User send data in invalid format"
+    },
+    "error": {
+      "database": "Server was unable to create connection with DB"
+    }
   }
 }

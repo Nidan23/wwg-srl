@@ -1,11 +1,17 @@
 import * as express from 'express'
 import * as bodyParser from 'body-parser'
+import {LoggingService} from "./service/logging.service";
+import {VariableService} from "./service/variable.service";
 
 export default class App {
     public app: express.Application
     public port: number
 
-    constructor(controllers: any[], port: number) {
+    constructor(
+        controllers: any[],
+        port: number,
+        private variableService: VariableService,
+        private loggingService: LoggingService) {
         this.app = express()
         this.port = port
 
@@ -25,7 +31,7 @@ export default class App {
 
     public listen(){
         this.app.listen(this.port, () => {
-            console.log(`Started on port: ${this.port}`)
+            this.loggingService.message(`${this.variableService.variables.logMessages.info.appRunning} ${this.port}`)
         })
     }
 }

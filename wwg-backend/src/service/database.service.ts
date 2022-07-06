@@ -2,11 +2,13 @@ import { DataSource } from "typeorm"
 import {VariableService} from "./variable.service";
 import {TodoModel} from "../model/todo.model";
 import {TodoType} from "../type/todo.type";
+import {LoggingService} from "./logging.service";
 
 export class DatabaseService {
 
     constructor(
-        private variableService: VariableService
+        private variableService: VariableService,
+        private loggingService: LoggingService
     ) {
         this.initDatabaseConnection()
     }
@@ -23,10 +25,10 @@ export class DatabaseService {
         this.dataSource
             .initialize()
             .then(() => {
-                console.log(this.variableService.variables.databaseUp)
+                this.loggingService.message(this.variableService.variables.logMessages.info.database)
             })
             .catch((err) => {
-                console.error(this.variableService.variables.databaseDown, err)
+                this.loggingService.error(this.variableService.variables.logMessages.error.database)
             })
     }
 
