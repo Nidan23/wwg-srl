@@ -19,5 +19,6 @@ export class AddTodoFormComponent implements OnInit {
   addTodo(name: string){
     const todo: TodoModel = new TodoModel(name)
     this.todoService.addTodo(todo)
+    window.location.reload()
   }
 }

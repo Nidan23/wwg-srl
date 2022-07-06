@@ -17,7 +17,6 @@ export class TodoService {
   addTodo(todo: TodoModel){
     this.backendConnectorService.addTodo(todo)
       .subscribe()
-    this.getAllTodos()
   }
 
   removeTodo(id: number){
