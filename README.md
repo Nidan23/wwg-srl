@@ -15,3 +15,4 @@
  - butt I decided otherwise, so no .env, but every (or almost every) preparation 4 this was already made
  - I tired 2 create sth similar 2 dependency injection in Nest.js apps, let me know how it went
  - Hope 2 hear feedback from you soon
+ - & yeah, that's long and nonsense readme, but hey, why not?
