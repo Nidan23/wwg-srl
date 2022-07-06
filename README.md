@@ -10,6 +10,6 @@
  - Any further questions? Email me or sth
  - Oh! I almost forgot, CREATE/ADD (POST method endpoint) accepts only Array of data -> easier way 2 send a lot of data at once ;)
  - Same with UPDATE
- - Endpoint mapping is in `./wwg-backend/src/assets/variables/variables.json` in first few lines
+ - Endpoint mapping is in `./wwg-backend/src/assets/variables/variables.json` in first few lines & in `./wwg-backend/src/controller/todo.controller.ts`
  - I tired 2 create sth similar 2 dependency injection in Nest.js apps, let me know how it went
  - Hope 2 hear feedback from you soon
