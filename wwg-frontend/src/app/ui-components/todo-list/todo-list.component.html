@@ -1,0 +1,17 @@
+<div class="m-2">
+  <table class="table table-striped tabled-bordered table-sm">
+    <thead>
+    <tr><th>#</th><th>Task name</th><th>Is finished</th><th>Created At</th><th>Completed At</th><th>Remove</th></tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td><input type="checkbox" [checked]="item.isFinished" (click)="updateTodo(item)"/></td>
+      <td>{{ item.createdAt }}</td>
+      <td>{{ item.completedAt }}</td>
+      <td><input type="button" (click)="removeTodo(item.id)" value="Remove"/></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
