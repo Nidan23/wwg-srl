@@ -11,5 +11,7 @@
  - Oh! I almost forgot, CREATE/ADD (POST method endpoint) accepts only Array of data -> easier way 2 send a lot of data at once ;)
  - Same with UPDATE
  - Endpoint mapping is in `./wwg-backend/src/assets/variables/variables.json` in first few lines & in `./wwg-backend/src/controller/todo.controller.ts`
+ - Basically it's `http://localhost:3000/todo/${action}` -> action is `["add", "get", "getAll", "update", "delete"]` & `3000` is default port, you can add `.env` in `./wwg-backend/src/assets/env/.env`
+ - butt I decided otherwise, so no .env, but every (or almost every) preparation 4 this was already made
  - I tired 2 create sth similar 2 dependency injection in Nest.js apps, let me know how it went
  - Hope 2 hear feedback from you soon
