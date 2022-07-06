@@ -26,10 +26,12 @@ export class TodoListComponent implements OnInit{
   updateTodo(todo?: TodoModel){
     if(todo != null)
       this.todoService.updateTodo(todo)
+    window.location.reload()
   }
 
   removeTodo(id?: number){
     if(id != null)
       this.todoService.removeTodo(id)
+    window.location.reload()
   }
 }
