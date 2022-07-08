@@ -9,4 +9,4 @@ services:
   wwg-backend:
     build: ./wwg-backend
     ports:
-      - '3000:3000'cls
+      - '3000:3000'
